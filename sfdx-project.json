@@ -1,0 +1,28 @@
+{
+  "packageDirectories": [
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "force-app",
+      "default": true,
+      "package": "Logger",
+      "versionDescription": "2024 Release of NebulaLogger"
+    },
+    {
+      "versionName": "1.0",
+      "versionNumber": "1.1.0.NEXT",
+      "path": "force-app",
+      "default": false,
+      "package": "CFSLogger",
+      "versionDescription": "2024 Release of CFSLogger"
+    }
+  ],
+  "name": "PlaygroundOrg",
+  "namespace": "CFSL",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "62.0",
+  "packageAliases": {
+    "Logger": "0HoGC000000bluK0AQ",
+    "CFSLogger": "0HoGC000000bluP0AQ"
+  }
+}
