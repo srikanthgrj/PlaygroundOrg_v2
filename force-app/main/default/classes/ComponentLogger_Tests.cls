@@ -133,7 +133,6 @@ private class ComponentLogger_Tests {
     LogEntryEvent__e publishedLogEntryEvent = (LogEntryEvent__e) LoggerMockDataStore.getEventBus().getPublishedPlatformEvents().get(0);
     System.Assert.areEqual('some value', publishedLogEntryEvent.HttpRequestBody__c);
     System.Assert.areEqual('another value', publishedLogEntryEvent.HttpRequestMethod__c);
-    System.Assert.areEqual('another value123', publishedLogEntryEvent.HttpRequestMethod__c);
   }
 
   @IsTest
