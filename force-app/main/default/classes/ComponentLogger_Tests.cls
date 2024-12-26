@@ -440,6 +440,7 @@ private class ComponentLogger_Tests {
     System.Assert.areEqual(1, LoggerMockDataStore.getEventBus().getPublishedPlatformEvents().size());
     LogEntryEvent__e publishedLogEntryEvent = (LogEntryEvent__e) LoggerMockDataStore.getEventBus().getPublishedPlatformEvents().get(0);
     System.Assert.areEqual('Component', publishedLogEntryEvent.OriginType__c);
+    System.Assert.areEqual('Component', publishedLogEntryEvent.OriginType__c);
     System.Assert.areEqual('Aura', publishedLogEntryEvent.ComponentType__c);
     System.Assert.areEqual(
       componentLogEntry.originStackTrace.componentName + '.' + componentLogEntry.originStackTrace.functionName,
