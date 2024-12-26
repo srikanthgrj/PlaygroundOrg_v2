@@ -82,7 +82,6 @@ private class ComponentLogger_Tests {
     ComponentLogger.ComponentLogEntry componentLogEntry = createMockComponentLogEntry();
     System.Assert.isNotNull(componentLogEntry.browser, 'Test assumes the browser context has been populated');
     System.Assert.isNotNull(componentLogEntry.browser.address, 'Test assumes the browser context has been populated');
-    System.Assert.isNotNull(componentLogEntry.browser.address, 'Test123 assumes the browser context has been populated');
     ComponentLogger.saveComponentLogEntries(new List<ComponentLogger.ComponentLogEntry>{ componentLogEntry }, null);
 
     LogEntryEvent__e publishedLogEntryEvent = (LogEntryEvent__e) LoggerMockDataStore.getEventBus().getPublishedPlatformEvents().get(0);
@@ -134,6 +133,7 @@ private class ComponentLogger_Tests {
     LogEntryEvent__e publishedLogEntryEvent = (LogEntryEvent__e) LoggerMockDataStore.getEventBus().getPublishedPlatformEvents().get(0);
     System.Assert.areEqual('some value', publishedLogEntryEvent.HttpRequestBody__c);
     System.Assert.areEqual('another value', publishedLogEntryEvent.HttpRequestMethod__c);
+    System.Assert.areEqual('another value123', publishedLogEntryEvent.HttpRequestMethod__c);
   }
 
   @IsTest
